@@ -51,11 +51,37 @@
                   <textarea class="textarea is-medium" id="noteText"></textarea>
                 </div>
               </div>
+
+            <div class="dropdown">
+  <div class="dropdown-trigger">
+    <button id = "dropdownButton" class="button" onclick = " toggleDropDown()" aria-haspopup="true" aria-controls="dropdown-menu">
+      <span>Labels</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      <a onclick = 'addItem("Work")' class="dropdown-item">
+        Work
+      </a>
+      <a onclick = 'addItem("Personal")' class="dropdown-item">
+        Personal
+      </a>
+      <a onclick = 'addItem("CS Tutorials")' class="dropdown-item">
+        CS Tutorials
+      </a>
+    </div>
+  </div>
+</div>
+
               <div class="control">
-                <button class="button is-link is-fullwidth has-text-weight-medium is-medium">Create Note</button>
+                <button 
+                class="button is-link is-fullwidth has-text-weight-medium is-medium"
+                onclick = "submitNote()">Create Note</button>
               </div>
             </div>
-            
           </div>
         </div>
       </div>

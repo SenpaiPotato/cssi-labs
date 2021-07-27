@@ -19,7 +19,7 @@ const handleNoteSubmit = () => {
   // 2. Format the data and write it to our database
   firebase.database().ref(`users/${googleUser.uid}`).push({
     title: noteTitle.value,
-    text: noteText.value
+    note: noteText.value
   })
   // 3. Clear the form so that we can write a new note
   .then(() => {
